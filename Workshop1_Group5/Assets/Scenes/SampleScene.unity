@@ -418,7 +418,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eb0f2537cd3f4214eb675f84c9ffa675, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5506e151d53a26c44b4b7cdd436f45e7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a7b28a86f21a642b5599adc42f2f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myclip: {fileID: 8300000, guid: eb0f2537cd3f4214eb675f84c9ffa675, type: 3}
+  myclip: {fileID: 8300000, guid: 5506e151d53a26c44b4b7cdd436f45e7, type: 3}
 --- !u!65 &746577649
 BoxCollider:
   m_ObjectHideFlags: 0
