@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Text timerText;
     private float alkuAika;
 
+
+
     public Text scoreText;
     private int scores;
 
@@ -27,19 +29,18 @@ public class GameManager : MonoBehaviour
 
         aloitaButton.SetActive(true);
         peliAktiivinen = false;
-        /*
-        //Deaktivoi jantterit
+        
+        //Deaktivoi jantterit aluksi
         for (int i = 0; i < jantterit.Count; i++)
         {
             jantterit[i].SetActive(false);
         }
-        */
+        
 
     }
 
     void Update()
     {
-
 
         if (peliAktiivinen == true)
         {
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
 
 
         }
+
+
 
 
     }
@@ -72,7 +75,8 @@ public class GameManager : MonoBehaviour
     {
         aloitaButton.SetActive(false);
         peliAktiivinen = true;
-        InvokeRepeating("JanterAktiivinen", 1f, 2f);  //yhden sekunnin viive, toistaa joka toinen sekunti
+        //Aktivoi satunnaisia janttereita
+        InvokeRepeating("JanterAktiivinen", 2f, 2f);  //Kahden sekunnin alkuviive, toistaa joka toinen sekunti
 
     }
 
