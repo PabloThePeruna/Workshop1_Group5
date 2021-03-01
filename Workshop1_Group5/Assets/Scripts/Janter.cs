@@ -11,9 +11,15 @@ public class Janter : MonoBehaviour
 
     private GameManager gameManagerScript;
 
+    private IEnumerator janterCoroutine;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        //janterCoroutine = Janterajastin();
+
+
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         hinge = GetComponent<HingeJoint>();
@@ -27,15 +33,15 @@ public class Janter : MonoBehaviour
     {
         if (gameManagerScript.jantteriAktiivinen == true)
         {
-            motor.force = 10;
-            motor.targetVelocity = 200;
-            motor.freeSpin = false;
-            hinge.motor = motor;
-            hinge.useMotor = true;
-            print("Pitäisi kääntyä pystyyn");
+
+
+            StartCoroutine(ExampleCoroutine());
+
+
+
 
         }
-
+        /*
         else
         {
             motor.force = 10;
@@ -46,7 +52,7 @@ public class Janter : MonoBehaviour
             print("Pitäisi kaatua");
 
         }
-
+        */
         /*
         //Tähän "kun osuu, niin kaatuu)
         if (osuma)
@@ -60,6 +66,32 @@ public class Janter : MonoBehaviour
         }
         */
     }
+
+    IEnumerator ExampleCoroutine()
+    {
+        motor.force = 10;
+        motor.targetVelocity = 200;
+        motor.freeSpin = false;
+        hinge.motor = motor;
+        hinge.useMotor = true;
+        print("Pitäisi kääntyä pystyyn");
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        motor.force = 10;
+        motor.targetVelocity = -200;
+        motor.freeSpin = false;
+        hinge.motor = motor;
+        hinge.useMotor = true;
+        print("Pitäisi kaatua");
+
+        yield return new WaitForSeconds(2);
+
+        this.gameObject.SetActive(false);
+
+    }
+
 
 
 

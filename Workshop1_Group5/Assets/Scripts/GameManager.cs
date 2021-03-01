@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,36 +10,46 @@ public class GameManager : MonoBehaviour
     public bool jantteriAktiivinen;
     public GameObject aloitaButton;
 
-    private float turnSpeed = 2.0f;
+    public Text timerText;
+    private float alkuAika;
 
+    public Text scoreText;
+    private int scores;
 
     public List<GameObject> jantterit = new List<GameObject>();
 
-    private IEnumerator janterSelectCoroutine;
 
 
     void Start()
     {
+        scores = 0;
+        alkuAika = 60;
+
         aloitaButton.SetActive(true);
         peliAktiivinen = false;
-
-        janterSelectCoroutine = JanterSelectAjastin(Random.Range(2.0f, 5.0f));
-
-        
+        /*
         //Deaktivoi jantterit
         for (int i = 0; i < jantterit.Count; i++)
         {
             jantterit[i].SetActive(false);
         }
-        
+        */
 
     }
 
     void Update()
     {
+
+
         if (peliAktiivinen == true)
         {
-            StartCoroutine(janterSelectCoroutine);
+
+            alkuAika -= Time.deltaTime;
+
+            scoreText.text = "Pisteet: " + scores.ToString();
+            timerText.text = "Aika: " + alkuAika.ToString("F0");
+
+
 
         }
 
@@ -48,29 +59,21 @@ public class GameManager : MonoBehaviour
     void JanterAktiivinen()
     {
 
+        print("toistaa " + alkuAika.ToString("F0"));
+
+        jantterit[Random.Range(0, jantterit.Count)].SetActive(true);
+        jantteriAktiivinen = true;
+        print("Satunnainen jantteri aktiiviseksi");
     }
 
-    private IEnumerator JanterSelectAjastin(float waitTime)
-    {
-
-        yield return new WaitForSeconds(waitTime);
-
-
-            jantterit[Random.Range(0, jantterit.Count)].SetActive(true);
-            jantteriAktiivinen = true;
-            print("Satunnainen jantteri aktiiviseksi");
-        
-
-
-
-        
-    }
 
 
     public void AloitaPeli()
     {
         aloitaButton.SetActive(false);
         peliAktiivinen = true;
+        InvokeRepeating("JanterAktiivinen", 1f, 2f);  //yhden sekunnin viive, toistaa joka toinen sekunti
+
     }
 
 }
