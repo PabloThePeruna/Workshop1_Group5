@@ -5,13 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public GameObject kiilto;
+
+    private int kiiltoSpeed = 900;
+
+
+    private void Update()
+    {
+        kiilto.transform.position += new Vector3(1 * Time.deltaTime * kiiltoSpeed, 0, 0);
+
+        if (kiilto.transform.position.x > 4000)
+        {
+            kiilto.transform.position = new Vector3(-570, 0, 0);
+        }
+
+    }
+
+
     public void PlayGame()
     {
+        Debug.Log("Play");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // Update is called once per frame
     public void QuitGame()
     {
         Debug.Log("Quit");
