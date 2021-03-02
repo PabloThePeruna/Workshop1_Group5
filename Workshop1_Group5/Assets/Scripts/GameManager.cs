@@ -60,10 +60,10 @@ public class GameManager : MonoBehaviour
 
 
 
-        //Deaktivoi jantterit aluksi
+        //Aktivoi jantterit aluksi
         for (int i = 0; i < jantterit.Count; i++)
         {
-            jantterit[i].SetActive(false);
+            jantterit[i].SetActive(true);
         }
         
 
