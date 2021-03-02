@@ -12,11 +12,14 @@ public class Gun : MonoBehaviour
     public float shootingSpeed = 1;
 
     private Interactable interactable;
+
+    private AudioSource source;
     
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<Interactable>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,5 +42,6 @@ public class Gun : MonoBehaviour
         Debug.Log("Fire");
         Rigidbody bulletrb = Instantiate(bullet, barrelPivot.position, barrelPivot.rotation).GetComponent<Rigidbody>();
         bulletrb.velocity = barrelPivot.forward * shootingSpeed;
+        source.Play();
     }
 }
