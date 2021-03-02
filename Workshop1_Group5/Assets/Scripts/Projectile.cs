@@ -6,11 +6,13 @@ public class Projectile : MonoBehaviour
 {
 
     private GameManager gameManagerScript;
+    private Janter janterScript;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManager>();
+        janterScript = GameObject.FindGameObjectWithTag("Jantteri").GetComponent<Janter>();
 
     }
 
@@ -26,6 +28,7 @@ public class Projectile : MonoBehaviour
         {
             gameManagerScript.scores++;
             Debug.Log("Osuma");
+            janterScript.KaadaJantteri();
         }
     }
 }

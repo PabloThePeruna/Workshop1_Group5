@@ -67,7 +67,15 @@ public class Janter : MonoBehaviour
 
     }
 
-
+    public void KaadaJantteri()
+    {
+        motor.force = 50;
+        motor.targetVelocity = -200;
+        motor.freeSpin = false;
+        hinge.motor = motor;
+        hinge.useMotor = true;
+        print("Pitäisi kaatua osumasta");
+    }
 
 
 }
