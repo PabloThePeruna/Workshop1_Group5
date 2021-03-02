@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public AudioSource leftSpeaker;
     public AudioSource rightSpeaker;
 
+    //private IEnumerator WaitCoroutine2;
+
 
     public Text timerText;
     private float alkuAika;
@@ -50,13 +52,16 @@ public class GameManager : MonoBehaviour
         scores = 0;
         alkuAika = 60;
 
-        aloitaButton.SetActive(true);
+        aloitaButton.SetActive(false);
         loppuPanel.SetActive(false);
-        peliAktiivinen = true;
+        peliAktiivinen = false;
 
         leftSpeaker.PlayOneShot(intro);
         rightSpeaker.PlayOneShot(intro);
 
+
+
+        StartCoroutine(WaitCoroutine());
 
 
 
@@ -65,7 +70,8 @@ public class GameManager : MonoBehaviour
         {
             jantterit[i].SetActive(true);
         }
-        
+        WaitCoroutine();
+
 
     }
 
@@ -160,8 +166,7 @@ public class GameManager : MonoBehaviour
 
     public void AloitaPeli()
     {
-        leftSpeaker.PlayOneShot(afterFirstShot);
-        rightSpeaker.PlayOneShot(afterFirstShot);
+
 
         aloitaButton.SetActive(false);
         peliAktiivinen = true;
@@ -179,7 +184,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("TahdonOllaLääkintäMies");
     }
 
+    IEnumerator WaitCoroutine()
+    {
 
+        yield return new WaitForSeconds(4);
+        leftSpeaker.PlayOneShot(afterFirstShot);
+        rightSpeaker.PlayOneShot(afterFirstShot);
+        yield return new WaitForSeconds(5);
+
+        peliAktiivinen = true;
+        AloitaPeli();
+
+    }
 
 
 }

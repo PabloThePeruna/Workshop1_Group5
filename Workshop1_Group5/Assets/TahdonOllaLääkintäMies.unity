@@ -1220,7 +1220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &151210363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3061,8 +3061,8 @@ MonoBehaviour:
   jantteriAktiivinen: 0
   aloitaButton: {fileID: 151210362}
   loppuPanel: {fileID: 1706251487}
-  intro: {fileID: 8300000, guid: ef70c977f4cbe50488e2d360b7b4e149, type: 3}
-  afterFirstShot: {fileID: 8300000, guid: f0ef5eca848f1e54f95dd6a38174972d, type: 3}
+  intro: {fileID: 8300000, guid: d727fcdca693db1419ab94b75aeec5d4, type: 3}
+  afterFirstShot: {fileID: 8300000, guid: 2b5bacfaa3e110b4f941f35fd0edf251, type: 3}
   ceaseFire: {fileID: 8300000, guid: 8671f3a83297c8f4d8bebbc5ac902a22, type: 3}
   GO: {fileID: 8300000, guid: b27ba31e3ba3a4446a4654221e42c7be, type: 3}
   sec5: {fileID: 8300000, guid: 8e418dc7080d71240b29ca1634529eae, type: 3}
