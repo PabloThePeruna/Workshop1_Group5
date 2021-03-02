@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public bool peliAktiivinen;
     public bool jantteriAktiivinen;
     public GameObject aloitaButton;
+    public GameObject loppuPanel;
 
     public Text timerText;
     private float alkuAika;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
 
 
     public Text scoreText;
+    public Text scoreTextEnd;
     private int scores;
 
     public List<GameObject> jantterit = new List<GameObject>();
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
         alkuAika = 60;
 
         aloitaButton.SetActive(true);
+        loppuPanel.SetActive(false);
         peliAktiivinen = false;
         
         //Deaktivoi jantterit aluksi
@@ -41,22 +44,28 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        //Päivittää pisteet ja ajankulun teksteihin
         if (peliAktiivinen == true)
         {
 
             alkuAika -= Time.deltaTime;
 
-            scoreText.text = "Pisteet: " + scores.ToString();
-            timerText.text = "Aika: " + alkuAika.ToString("F0");
+            scoreText.text = "Scores: " + scores.ToString();
+            timerText.text = "Time: " + alkuAika.ToString("F0");
 
 
 
         }
 
-
-
-
+        //Kun aika ja peli loppuu
+        if (alkuAika <= 0)
+        {
+            loppuPanel.SetActive(true);
+            scoreText.text = " ";
+            scoreTextEnd.text = "Scores: " + scores.ToString();
+            timerText.text = " ";
+        }
+                
     }
 
     void JanterAktiivinen()
