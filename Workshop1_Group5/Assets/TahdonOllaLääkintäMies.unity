@@ -6971,6 +6971,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1dfaf1d5e127d49affcbc3b534471f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireAction:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
   bullet: {fileID: 1946279732}
   barrelPivot: {fileID: 1471492022}
   shootingSpeed: 40
