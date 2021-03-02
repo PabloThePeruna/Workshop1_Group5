@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 
         aloitaButton.SetActive(true);
         loppuPanel.SetActive(false);
-        peliAktiivinen = false;
+        peliAktiivinen = true;
 
         leftSpeaker.PlayOneShot(intro);
         rightSpeaker.PlayOneShot(intro);
@@ -119,6 +119,10 @@ public class GameManager : MonoBehaviour
         if (alkuAika <= 0)
         {
             loppuPanel.SetActive(true);
+
+            // Saadaan toi "Aloita peli" teksti pisteiden edestä pois
+            aloitaButton.SetActive(false);
+
             scoreText.text = " ";
             scoreTextEnd.text = "Scores: " + scores.ToString();
             timerText.text = " ";
