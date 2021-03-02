@@ -8,6 +8,8 @@ TagManager:
   - Torvi2
   - Fire
   - Jantteri
+  - Pelaaja
+  - Teleportti
   layers:
   - Default
   - TransparentFX
