@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public Text scoreTextEnd;
-    private int scores;
+    public int scores;
 
     public List<GameObject> jantterit = new List<GameObject>();
 

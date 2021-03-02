@@ -3074,6 +3074,7 @@ MonoBehaviour:
   timerText: {fileID: 76363683}
   scoreText: {fileID: 923888551}
   scoreTextEnd: {fileID: 1597613425}
+  scores: 0
   jantterit:
   - {fileID: 2088495983}
   - {fileID: 1593743433}
