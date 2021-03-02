@@ -45,7 +45,7 @@ public class Janter : MonoBehaviour
 
     IEnumerator JanterCoroutine()
     {
-        motor.force = 10;
+        motor.force = 50;
         motor.targetVelocity = 200;
         motor.freeSpin = false;
         hinge.motor = motor;
@@ -54,7 +54,7 @@ public class Janter : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        motor.force = 10;
+        motor.force = 50;
         motor.targetVelocity = -200;
         motor.freeSpin = false;
         hinge.motor = motor;

@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.74
+      value: 3.173
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -2412,7 +2412,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &412888265
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2424,7 +2424,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!1001 &416313297
@@ -2827,7 +2827,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &458884654
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2839,7 +2839,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!1 &522511137 stripped
@@ -2979,7 +2979,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.39
+      value: 2.434
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -4019,7 +4019,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 61368b60658e5304f91397b146c6c88b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.655
+      value: 2.715
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61368b60658e5304f91397b146c6c88b,
         type: 3}
@@ -4166,7 +4166,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.15
+      value: 1.759
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -4875,7 +4875,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &1100470787
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4887,7 +4887,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!1001 &1103397371
@@ -5941,7 +5941,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.58
+      value: 2.634
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -6335,7 +6335,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 121.93
+      value: 121.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -6345,7 +6345,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.84
+      value: 55.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -7019,7 +7019,7 @@ MonoBehaviour:
     needsReinit: 0
   bullet: {fileID: 1946279732}
   barrelPivot: {fileID: 1471492022}
-  shootingSpeed: 40
+  shootingSpeed: 200
 --- !u!1001 &1563220540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7112,7 +7112,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!114 &1570316675
@@ -7177,7 +7177,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1001 &1575617088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7270,7 +7270,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!114 &1593743435
@@ -7335,7 +7335,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1597613423
 GameObject:
   m_ObjectHideFlags: 0
@@ -7993,7 +7993,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.581
+      value: 2.748
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e980ad55defa704f886724fef212883,
         type: 3}
@@ -9109,7 +9109,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &1852294585
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9121,7 +9121,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!1001 &1856867577
@@ -9760,7 +9760,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192958361142580802, guid: e7e9767bb7f6fb14f98d44f9f247c576, type: 3}
 --- !u!54 &2088495988
@@ -9778,7 +9778,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2088495989
 MonoBehaviour:
   m_ObjectHideFlags: 0
