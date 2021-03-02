@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.workshop1_group5.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\TGL\\Documents\\GitHub\\Workshop1_Group5\\Workshop1_Group5\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Workshop1_Group5 [Testing]"
+        }
+      }
+    }
+  ]
+}
